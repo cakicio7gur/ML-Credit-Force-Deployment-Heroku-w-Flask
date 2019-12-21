@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+	<header>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <div>
+                <div class="jumbotron" style="background-color:#4285f4 !important; text-align: center;">
+                    <h2 style="color:#fff;">Kredi Başvuru Sayfası</h2>      
+                    <p style="color:#fff;">Kredi Değerlendirmeleri Yapay Zeka Tarafından Yapılmaktadır.</p>
+            </div>
+            </div>
+    </header>
+    <div class="container">
+        <form action="{{url_for('predict')}}" method="POST">
+            <div class="form-group">
+                <label>Kredi Miktarını Giriniz :</label>
+                <input class="form-control" name="krediMiktari" required="required">
+            </div>
+            <div class="form-group">
+                    <label>Yaşınızı Giriniz :</label>
+                    <input class="form-control" name="yas" required="required">
+            </div>
+            <div class="form-group">
+                <label>Ev Durumunu Seçiniz :</label>
+                <select name="evDurumu" class="form-control">
+                  <option value="0">Kendime Ait</option>
+                  <option value="1">Kira</option>
+                </select>
+            </div>
+            <div class="form-group">
+                    <label>Bugüne Kadar Aldığınız Kredi Sayısı Giriniz :</label>
+                    <input class="form-control" name="ak_sayisi" required="required">
+            </div>
+            <div class="form-group">
+                <label>Telefon Durumunu Seçiniz :</label>
+                <select name="telefonDurumu" class="form-control">
+                  <option value="0">Kullanıyorum</option>
+                  <option value="1">Kullanmıyorum</option>
+                </select>
+            </div>
+            <input type="submit" class="btn btn-primary btn-sm btn-block" value="Sorgula"></input>
+        </form>
+    </div>		
+</body>
+</html>

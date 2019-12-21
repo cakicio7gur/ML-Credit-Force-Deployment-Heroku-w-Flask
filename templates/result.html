@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <header>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <div>
+            <div class="jumbotron" style="background-color:#4285f4 !important; text-align: center;">
+                <h2 style="color:#fff;">Kredi Başvuru Sayfası</h2>      
+                <p style="color:#fff;">Kredi Değerlendirmeleri Yapay Zeka Tarafından Yapılmaktadır.</p>
+            </div>
+        </div>
+    </header>       
+        <div class="results">
+                {% if prediction == 0 %}
+                <div class="form-group" style="margin-top: 50px;">
+                    <div style="text-align: center;">
+                        <h2 style="color:red;">{{ prediction_text }}</h2>
+                    </div>
+                </div>
+                {% elif prediction == 1 %}
+                <div class="form-group" style="margin-top: 50px;">
+                        <div style=" text-align: center;">
+                            <h2 style="color:green;">{{ prediction_text }}</h2>
+                        </div>
+                </div>
+                {% endif %}  
+        </div>
+</body>
+</html>
