@@ -1,3 +1,3 @@
 # ML-Credit-Force-Deployment-Heroku-w-Flask
 
-https://ml-credit-force-app.herokuapp.com/
+This app calculates the reliability score specific to the information they provide for users who want to withdraw credit.
